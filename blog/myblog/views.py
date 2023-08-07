@@ -91,7 +91,7 @@ class FeedBackView(View):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             try:
-                send_mail(f'От {name} | {subject}', message, from_email, ['edik622mujpc@gmail.com'])
+                send_mail(f'От {name} | {subject}', message, from_email, ['your_gmail'])
             except BadHeaderError:
                 return HttpResponse('Невалидный заголовок')
             return HttpResponseRedirect('success')
